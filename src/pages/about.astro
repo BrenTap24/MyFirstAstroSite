@@ -1,7 +1,10 @@
 ---
+import Navigation from '../components/Navigation.astro';
 import '../styles/global.css';
 
 const pageTitle = "About Me";
+
+import Footer from '../components/Footer.astro';
 
 const identity = {
   firstName: "Brennan",
@@ -39,9 +42,7 @@ const skillColor = "crimson";
     </style>
 	</head>
 	<body>
-        <a href="/">Home</a>
-        <a href="/about/">About</a>
-        <a href="/blog/">Blog</a>
+        <Navigation />
 
 		<h1>{pageTitle}</h1>
         <h2>... And my new website</h2>
@@ -49,6 +50,7 @@ const skillColor = "crimson";
         <p>I am working on Astro's intro tutorial. This has been fun and simple and the step by step instructions are really useful.</p>
 
         <p>I will update this site as I go along with completing the tutorial.</p>
+        
 	</body>
     <p>Here are a few facts about me:</p>
 <ul>
@@ -68,4 +70,8 @@ const skillColor = "crimson";
 {finished && <p>I finished this tutorial!</p>}
 
 {goal === 3 ? <p>My goal is to finish in 3 days.</p> : <p>My goal is not 3 days.</p>}
+<Footer />
+<script>
+    import "../scripts/menu.js";
+  </script>
 </html>
